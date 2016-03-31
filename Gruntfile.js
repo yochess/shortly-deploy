@@ -9,7 +9,7 @@ module.exports = function(grunt) {
 
       dist: {
         src: ['public/client/*.js'],
-        dest: 'public/dist<%= pkg.name %>.js'
+        dest: 'public/dist/<%= pkg.name %>.js'
       },
 
     },
@@ -102,8 +102,7 @@ module.exports = function(grunt) {
     'mochaTest'
   ]);
 
-  grunt.registerTask('build', [
-  ]);
+  grunt.registerTask('build', ['concat']);
 
   grunt.registerTask('upload', function(n) {
     if (grunt.option('prod')) {
@@ -117,5 +116,6 @@ module.exports = function(grunt) {
     // add your deploy tasks here
   ]);
 
+  grunt.registerTask('default', ['build']);
 
 };

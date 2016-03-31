@@ -32,6 +32,7 @@
     "sqlite3": "~3.0.10"
   },
   "devDependencies": {
+    "grunt-contrib-watch": "^0.6.1",
     "supertest": "^0.10.0"
   }
 }
